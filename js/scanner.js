@@ -10,6 +10,8 @@ function isValidQR(text) {
 window.addEventListener("DOMContentLoaded", () => {
   const readerElemId = "reader";
   const html5QrCode = new Html5Qrcode(readerElemId);
+  const msgElem = document.getElementById("msg");
+  if (msgElem) msgElem.textContent = "読み取りエラー：" + err;
 
   const config = {
     fps: 10,
@@ -52,3 +54,4 @@ window.addEventListener("DOMContentLoaded", () => {
     document.getElementById("msg").textContent = "カメラ取得失敗：" + err;
   });
 });
+
