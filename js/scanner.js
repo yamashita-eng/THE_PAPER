@@ -1,8 +1,8 @@
 // ルール判定関数（必要に応じて書き換えてください）
 // true を返せば OK、false なら NG。
 function isValidQR(text) {
-  // 例：文字列が ""TPN-"" で始まる → OK
-  //const rule = /^TPN-[0-9A-Z]+$/;
+  // 例：文字列が ""XXX-"" で始まる → OK
+  //const rule = /^XXX-[0-9A-Z]+$/;
   //return rule.test(text.trim());
   return true;
 }
@@ -55,4 +55,5 @@ window.addEventListener(""DOMContentLoaded"", () => {
   }).catch(err => {
     document.getElementById(""msg"").textContent = ""カメラ取得失敗："" + err;
   });
+
 });
