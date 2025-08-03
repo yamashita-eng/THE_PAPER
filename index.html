@@ -1,16 +1,18 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
 <head>
-<meta charset="utf-8">
-<title>Camera Test</title>
-<script src="https://unpkg.com/html5-qrcode@2.3.10/html5-qrcode.min.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>QR 判定スキャナ</title>
+
+  <!-- ★まずライブラリを読み込む（必ず scanner.js より前） -->
+  <script src="https://unpkg.com/html5-qrcode@2.3.10/html5-qrcode.min.js"></script>
 </head>
 <body>
-<div id="reader" style="width:300px;margin:auto;"></div>
-<script>
-new Html5Qrcode("reader")
-  .start({ facingMode:"environment" }, { fps:10 }, t=>console.log("OK",t), e=>console.log("err",e))
-  .catch(err => alert("カメラ起動失敗: " + err));
-</script>
+  <h2>QRコードを読み取ってください</h2>
+  <div id="reader"></div>
+
+  <!-- ★自作スクリプトを最後に読み込む -->
+  <script src="js/scanner.js"></script>
 </body>
 </html>
