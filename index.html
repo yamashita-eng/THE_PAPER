@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang=""ja"">
+<head>
+  <meta charset=""UTF-8"" />
+  <meta name=""viewport"" content=""width=device-width, initial-scale=1.0"" />
+  <title>QR 判定スキャナ</title>
+  <style>
+    body{margin:0;font-family:sans-serif;text-align:center;background:#f5f5f5;}
+    #reader{width:100%;max-width:480px;margin:0 auto;}
+    #msg{margin:12px;font-size:1.1rem;}
+  </style>
+  <!-- ライブラリ：CDN版を利用 -->
+  <script src=""https://unpkg.com/html5-qrcode@2.3.10/html5-qrcode.min.js""></script>
+</head>
+<body>
+  <h2>QRコードを読み取ってください</h2>
+  <div id=""reader""></div>
+  <div id=""msg"">カメラ起動中…</div>
+
+<script src=""js/scanner.js""></script>
+</body>
+</html>
