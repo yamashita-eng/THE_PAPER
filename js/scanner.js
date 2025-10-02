@@ -18,13 +18,10 @@ window.addEventListener("DOMContentLoaded", () => {
   // QR 読み取り成功時
   const onSuccess = (decodedText, decodedResult) => {
     html5QrCode.stop().then(() => {
-      if (isValidQR(decodedText)) {
-        setTimeout(() =>
-          location.href = "./ok.html?code=" + encodeURIComponent(decodedText), 300);
-      } else {
-        setTimeout(() =>
-          location.href = "./ng.html?code=" + encodeURIComponent(decodedText), 300);
-      }
+      // 判定を行わず、常に ok.html に遷移する
+      // URLにQRコードのデータ（?code=...）を含めない
+      setTimeout(() =>
+        location.href = "./ok.html", 300);
     });
   };
 
