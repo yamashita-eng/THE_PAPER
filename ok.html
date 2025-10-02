@@ -2,7 +2,7 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content=""width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>OK!</title>
   <style>
     body{display:flex;flex-direction:column;justify-content:center;align-items:center;height:100vh;background:#e0ffe0;font-family:sans-serif;}
@@ -13,17 +13,15 @@
 </head>
 <body>
   <h1>✅ OK!</h1>
-  <p id="code"></p>
+  <p>10秒後に自動でスキャン画面に戻ります。</p>
   <button onclick="location.href='./index.html'">もう一度スキャン</button>
 
 <script>
-  // クエリ文字列からコード内容を表示
-  const params = new URL(location).searchParams;
-  const code = params.get("code");
-  if (code) document.getElementById("code").textContent = "読み取ったコード: " + code;
-  // 音は index 側で鳴らしているのでここでは省略
+  // 10秒後に index.html に自動で戻る処理
+  setTimeout(() => {
+    location.href = './index.html';
+  }, 10000); // 10000ミリ秒 = 10秒
 </script>
 </body>
 
 </html>
-
